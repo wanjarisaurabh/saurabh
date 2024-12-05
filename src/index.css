@@ -1,0 +1,91 @@
+/* Base Tailwind CSS imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 7px; /* Width of the vertical scrollbar */
+  height: 7px; /* Height of the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #181819; /* Thumb background color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6556cd; /* Thumb hover color */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f1e24; /* Track background color */
+}
+
+/* For Firefox */
+.scrollable {
+  scrollbar-width: thin; /* Makes the scrollbar thinner */
+  scrollbar-color: #6556cd #1f1e24; /* Thumb color and track color */
+}
+
+/* Dropdown Custom Styling */
+.select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #27272a;
+  flex: 1;
+  padding: 0 0.5em;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1em;
+  font-family: "Open Sans", sans-serif;
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  overflow: hidden;
+  border-radius: 0.25em;
+}
+
+.select::-ms-expand {
+  display: none; /* Hide the default dropdown arrow for IE */
+}
+
+.select::after {
+  content: "\25BC"; /* Unicode character for down arrow */
+  position: absolute;
+  top: 50%;
+  right: 0.75em;
+  transform: translateY(-50%);
+  background: #27272a;
+  color: #fff;
+  pointer-events: none;
+  transition: color 0.25s ease;
+}
+
+.select:hover::after {
+  color: #6556cd; /* Change arrow color on hover */
+}
+
+.select select {
+  border: none;
+  background-color: #27272a; /* Background color for select dropdown */
+  color: #fff; /* Text color */
+}
+
+.select option {
+  color: #fff; /* Option text color */
+}
+
+/* Ensure containers allow scrolling where needed */
+.scrollable {
+  overflow-y: auto;
+  max-height: 400px; /* Adjust height as per your layout */
+}
