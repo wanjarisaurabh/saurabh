@@ -1,7 +1,6 @@
 import React from "react";
 import Home from "./components/Home";
 import { Route, Routes } from "react-router-dom";
-import Loding from "./components/Loding";
 import Trending from "./components/Trending";
 import Popular from "./components/Popular";
 import Movie from "./components/Movie";
@@ -11,7 +10,7 @@ import Moviedetails from "./components/Moviedetails";
 import Tvdetails from "./components/Tvdetails";
 import Trailer from "./partials/Trailer";
 import Notfound from "./components/Notfound";
-import Peopledetails from "./components/peopledetails";
+import Peopledetails from "./components/Peopledetails";
 
 const App = () => {
   return (
